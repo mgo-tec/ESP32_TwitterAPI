@@ -1,6 +1,6 @@
 /*
   ESP32_TwitterAPI.h - for Arduino core for the ESP32 ( Use SPI library ).
-  Beta version 1.0
+  Beta version 1.1
   
 mgo-tec modified for code created by chaeplin for ESP32.
 

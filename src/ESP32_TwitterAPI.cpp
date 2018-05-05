@@ -1,7 +1,6 @@
 /*
   ESP32_TwitterAPI.cpp - for Arduino core for the ESP32 ( Use SPI library ).
-  Beta version 1.0
-  
+  Beta version 1.1
 mgo-tec modified for code created by chaeplin for ESP32.
 
 Reference: https://gist.github.com/chaeplin/32dd002ddc5fe92d026055130a519b72
@@ -85,7 +84,7 @@ bool ESP32_TwitterAPI::TrendTweet_HTTP_Request(const char *RootCA, String OAuth_
   String unicode_str[max_data];
   WiFiClientSecure client;
 
-  client.setCACert(RootCA);
+  if( strlen( RootCA ) > 0 ) client.setCACert(RootCA);
 
   if (client.connect(_Base_host, httpsPort)) {
     Serial.print(_Base_host); Serial.print(F("-------------"));
